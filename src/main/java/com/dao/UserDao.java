@@ -9,7 +9,7 @@ import org.hibernate.Transaction;
 import com.entity.User;
 
 public class UserDao {
-	private SessionFactory factory;
+	private SessionFactory factory = null;
 	private Session session = null;
 	private Transaction tx = null;
 	

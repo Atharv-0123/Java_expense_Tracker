@@ -8,6 +8,11 @@
 <meta charset="ISO-8859-1">
 <title>Login</title>
 <%@include file="components/all_css.jsp" %>
+<style type="text/css">
+.card-sh {
+	box-shadow: 0 0 6px 0 rgba(0,0,0,0.3);
+}
+</style>
 </head>
 <body>
 <%@include file="components/navbar.jsp" %>
@@ -42,7 +47,6 @@
 	Don't Have an account? <a href="register.jsp" class="text-decoration-none"> Create Account</a>
 	
 </form>
-</div>
 </div>
 </div>
 </div>

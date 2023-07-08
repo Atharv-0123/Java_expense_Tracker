@@ -18,14 +18,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.jsp"><i class="fa-solid fa-house"></i> Home</a>
+          <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
         </li>
         <c:if test="${not empty loginUser}">
         	<li class="nav-item">
             <a class="nav-link active" href="add_expense.jsp"><i class="fa-solid fa-plus"></i> Add Expense</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="view_expense.jsp" tabindex="-1" ><i class="fa-solid fa-eye"></i> View Expense</a>
+            <a class="nav-link active" href="view_expense.jsp" tabindex="-1" ><i class="fa-solid fa-list"></i> View Expense</a>
           </li>
         </c:if>
       </ul>
