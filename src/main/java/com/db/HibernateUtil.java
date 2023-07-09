@@ -5,6 +5,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+import com.entity.Expense;
 import com.entity.User;
 
 import org.hibernate.cfg.Configuration;
@@ -25,8 +27,8 @@ public class HibernateUtil {
 		
 		
 		properties.put(Environment.DRIVER,"com.mysql.cj.jdbc.Driver");
-		properties.put(Environment.URL,"jdbc:mysql://localhost:3306/expense_db");
-		properties.put(Environment.USER,"atharva");
+		properties.put(Environment.URL,"jdbc:mysql://localhost:3306/expense_tracker_db");
+		properties.put(Environment.USER,"admin");
 		properties.put(Environment.PASS,"root");
 		properties.put(Environment.DIALECT,"org.hibernate.dialect.MySQL8Dialect");
 		properties.put(Environment.HBM2DDL_AUTO,"update");
@@ -34,6 +36,7 @@ public class HibernateUtil {
 		
 		configuration.setProperties(properties);
 		configuration.addAnnotatedClass(User.class);
+		configuration.addAnnotatedClass(Expense.class);
 		
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
 		
